@@ -55,7 +55,7 @@ def part():
     return 8-tours
 # i call fonction to part in play
 def play():
-    import pickle,os
+    import pickle
     nom=name()
     print("bienvenu",nom)
     add=True
@@ -67,6 +67,8 @@ def play():
             add=False           
     if add:
         score=0
+    else:
+        score=player.getScore()
     while input("taper oui si vous voulez jouer ").lower()=="oui":
         score+=part()
         print("votre score est ",score)
