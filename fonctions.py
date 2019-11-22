@@ -26,7 +26,7 @@ def letrre_choise():
     import re
     lettre=input("entrez une lettre ").lower()
     while not bool(re.match(r"^[a-z]$",lettre)):
-         lettre=input("entrez une lettre ")
+         lettre=input("entrez une lettre ").lower()
     return lettre
 
 #fonction of play
