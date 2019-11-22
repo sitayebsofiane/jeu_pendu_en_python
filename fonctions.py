@@ -24,8 +24,8 @@ def mots():
 #fonction to check enter must be letter a to z
 def letrre_choise():
     import re
-    lettre=input("entrez une lettre ")
-    while not bool(re.match(r"^[a-z]$",lettre.lower())):
+    lettre=input("entrez une lettre ").lower()
+    while not bool(re.match(r"^[a-z]$",lettre)):
          lettre=input("entrez une lettre ")
     return lettre
 
@@ -68,7 +68,7 @@ def play():
     if add:
         score=0
     else:
-        score=player.getScore()
+        score+=player.getScore()
     while input("taper oui si vous voulez jouer ").lower()=="oui":
         score+=part()
         print("votre score est ",score)
